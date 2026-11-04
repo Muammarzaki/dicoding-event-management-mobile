@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_finished"
+        android:name="com.dicoding.fragment.FinishedFragment"
+        android:label="finishedFragment">
+        <action
+            android:id="@+id/action_finishedFragment_to_upcomingFragment"
+            app:destination="@id/navigation_upcoming" />
+        <action
+            android:id="@+id/action_navigation_finished_to_homeFragment"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_finished_to_settingsFragment"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_navigation_finished_to_favoritesFragment"
+            app:destination="@id/navigation_favorite" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_upcoming"
+        android:name="com.dicoding.fragment.UpComingFragment"
+        android:label="upcomingFragment">
+        <action
+            android:id="@+id/action_upcomingFragment_to_finishedFragment2"
+            app:destination="@id/navigation_finished" />
+        <action
+            android:id="@+id/action_navigation_upcoming_to_homeFragment"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_upcoming_to_favoritesFragment"
+            app:destination="@id/navigation_favorite" />
+        <action
+            android:id="@+id/action_navigation_upcoming_to_settingsFragment"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.dicoding.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_navigation_upcoming"
+            app:destination="@id/navigation_upcoming" />
+        <action
+            android:id="@+id/action_homeFragment_to_navigation_finished"
+            app:destination="@id/navigation_finished" />
+        <action
+            android:id="@+id/action_navigation_home_to_favoritesFragment"
+            app:destination="@id/navigation_favorite" />
+        <action
+            android:id="@+id/action_navigation_home_to_settingsFragment"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.dicoding.fragment.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_favoritesFragment"
+            app:destination="@id/navigation_favorite" />
+        <action
+            android:id="@+id/action_settingsFragment_to_navigation_finished"
+            app:destination="@id/navigation_finished" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="com.dicoding.fragment.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_settingsFragment"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_favoritesFragment_to_navigation_finished"
+            app:destination="@id/navigation_finished" />
+        <action
+            android:id="@+id/action_favoritesFragment_to_navigation_upcoming"
+            app:destination="@id/navigation_upcoming" />
+        <action
+            android:id="@+id/action_favoritesFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_favoritesFragment_to_settingsFragment2"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_favoritesFragment_to_settingsFragment3"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+
+</navigation>
